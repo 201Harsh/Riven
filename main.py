@@ -21,3 +21,11 @@ if not TMDB_API_KEY:
     raise RuntimeError("TMDB_API_KEY missing. Put it in .env as TMDB_API_KEY=xxxx")
 
 app = FastAPI(title="Movie Recommender API", version="3.0")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # for local streamlit
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
