@@ -20,8 +20,4 @@ TMDB_IMG_500 = "https://image.tmdb.org/t/p/w500"
 if not TMDB_API_KEY:
     raise RuntimeError("TMDB_API_KEY missing. Put it in .env as TMDB_API_KEY=xxxx")
 
-
-# =========================
-# FASTAPI APP
-# =========================
 app = FastAPI(title="Movie Recommender API", version="3.0")
